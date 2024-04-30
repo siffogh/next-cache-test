@@ -1,7 +1,7 @@
 import { cookies } from "next/headers";
 
 export async function fetchData() {
-  await fetch("https://fakeresponder.com/?sleep=5000", {
+  await fetch("https://fakeresponder.com/?sleep=2000", {
     next: {
       revalidate: 1,
     },

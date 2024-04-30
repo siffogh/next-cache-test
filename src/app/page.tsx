@@ -1,7 +1,16 @@
+import Heart from "./heart";
 import { fetchData } from "./utils";
 
 export default async function Home() {
   const data = await fetchData();
 
-  return <code>{JSON.stringify(data, null, 2)}</code>;
+  return (
+    <ul>
+      {new Array(200).fill(null).map((_, i) => (
+        <li key={i}>
+          <Heart />
+        </li>
+      ))}
+    </ul>
+  );
 }
